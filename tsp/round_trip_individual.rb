@@ -1,0 +1,3 @@
+class RoundTripIndividual < Individual
+  
+end

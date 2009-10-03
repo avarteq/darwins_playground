@@ -1,0 +1,2 @@
+class SurvivalOfTheFittest < Selection
+end

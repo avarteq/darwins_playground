@@ -1,0 +1,2 @@
+class GenIndividual < Array
+end
