@@ -15,4 +15,9 @@ describe RoundTripIndividual do
     origin.genes.size.should be(21)
     origin.genes[0].should be_instance_of(City)
   end
+  
+  it "should calculate a float fitness of the origin individual" do
+    origin = RoundTripIndividual.origin
+    origin.fitness.should be_kind_of(Float)
+  end
 end

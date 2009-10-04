@@ -1,4 +1,4 @@
-class GenIndividual
+class GenIndividual < Individual
   
   attr_accessor :genes
   
