@@ -4,13 +4,13 @@ class LinearDistance
   # === Parametes
   # Geo coordinate objects.
   def self.distance_to(from, to)  
-    dputs "FROM (länge, breite)"
+    dputs "FROM (laenge, breite)"
     lon_from = from.lon_radiant
     lat_from = from.lat_radiant    
     dputs lon_from
     dputs lat_from
     
-    dputs "FROM (länge, breite)"    
+    dputs "FROM (laenge, breite)"    
     lat_to = to.lat_radiant
     lon_to = to.lon_radiant
     dputs lon_to
