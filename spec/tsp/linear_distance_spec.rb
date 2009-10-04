@@ -8,7 +8,7 @@ describe LinearDistance do
     @saarbruecken = "49,14,5,N,6,59,40,E"
   end
   
-  it "should calculate the linear distance between berlin and saarbrücken as something near 805.46 km" do
+  it "should calculate the linear distance between berlin and saarbrücken as something near 798 km" do
     berlin = GeoCoordinate.build_from_coords_string(@berlin)
     sb = GeoCoordinate.build_from_coords_string(@saarbruecken)
     

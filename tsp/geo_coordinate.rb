@@ -21,17 +21,14 @@ class GeoCoordinate
 
   # Creates a geo coord using the given coords as a string.
   # ===Example
-  # Berlin: "52,22,71,N,13,31,23,E" OR
-  # Berlin: "7,Berlin,52,22,71,N,13,31,23,E"  
+  # Berlin: "52,22,71,N,13,31,23,E"
   def self.build_from_coords_string(coordinate_string)
-    coords = coordinate_string.split(/,/)
-    
-    # Throw away first to elements
-    2.times { coords.shift } if coords.size == 10
-    
+    coords = coordinate_string.split(/,/)    
     build_from_coords_array(coords)
   end
   
+  # === Example
+  # [52,22,71,"N",13,31,23,"E"]
   def self.build_from_coords_array(coords)
     GeoCoordinate.new(coords[0], coords[1], coords[2], coords[3], coords[4], coords[5], coords[6], coords[7])
   end
