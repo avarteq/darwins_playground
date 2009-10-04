@@ -1,9 +1,17 @@
 # A generation represents a number of individuals.
 class Generation < Array
-  
+
   # Returns an random individual
   def random_individual
     return at(random_index)
+  end
+
+  def sort
+    sort
+  end
+
+  def sort!
+    sort!
   end
   
   # Sorting is actually up to the individual's <=> operator.

@@ -26,7 +26,7 @@ class Evolver
   
   # Start evolutionary process
   def evolve
-    1000.times do |i|      
+    100000.times do |i|      
       operator = choose_random_operation
       operator.exec(@current_generation)
       generation_change if (i % @generation_size == 0)
@@ -51,8 +51,7 @@ class Evolver
   # We need at least two individuals for recombination.
   def bootstrap(origin)
     @current_generation << origin
-    second_individual = @mutation_operation.exec(@current_generation)
-    @current_generation << second_individual
+    @mutation_operation.exec(@current_generation)
   end
   
   # Perform a change from one to another generation.
@@ -63,7 +62,7 @@ class Evolver
     
     # Open a new generation and add the surving individuals
     @current_generation = Generation.new
-    @current_generation += fittest_n
+    fittest_n.each { |i| @current_generation << i } 
     @generation_count += 1
   end
 end
