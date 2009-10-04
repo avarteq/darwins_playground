@@ -11,4 +11,8 @@ class Individual
     @fitness_function.fitness(self)
   end
   
+  def <=>(b)
+    return self.fitness <=> b.fitness
+  end
+  
 end
