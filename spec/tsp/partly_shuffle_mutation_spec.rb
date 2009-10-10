@@ -8,15 +8,15 @@ require File.dirname(__FILE__) + "/../../" + "genetic/mutation"
 require File.dirname(__FILE__) + "/../../" + "genetic/generation"
 require File.dirname(__FILE__) + "/../../" + "tsp/round_trip_individual"
 require File.dirname(__FILE__) + "/../../" + "tsp/city"
-require File.dirname(__FILE__) + "/../../" + "tsp/shuffle_mutation"
+require File.dirname(__FILE__) + "/../../" + "tsp/partly_shuffle_mutation"
 
-describe ShuffleMutation do
+describe PartlyShuffleMutation do
   
   it "should create a second round trip individual" do
     @g = Generation.new
     origin = RoundTripIndividual.origin
     @g << origin
-    ShuffleMutation.new.exec(@g)
+    PartlyShuffleMutation.new.exec(@g)
     @g.size.times { |i| @g[i].should be_instance_of(RoundTripIndividual) }
   end
 end

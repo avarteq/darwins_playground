@@ -1,6 +1,8 @@
 # Manages the evolutionary process
 class Evolver
   
+  include GenerationObservable
+  
   attr_accessor :recombination_operation, :mutation_operation, :selection_operation
   
   # === Parameters
@@ -10,6 +12,8 @@ class Evolver
     @mutation_probability = 1 - @recombination_probability
     
     @generation_size = 100
+    
+    # How many generations have been passed?
     @generation_count = 1
     @generation_survial_rate = 5
     
@@ -19,21 +23,30 @@ class Evolver
     
     # @selection_operation = SurvivalOfTheFittest.new
     
-    @current_generation = Generation.new
+    @current_generation = Generation.new  
 
     bootstrap(origin)
   end
   
   # Start evolutionary process
   def evolve
-    100000.times do |i|      
-      operator = choose_random_operation
-      operator.exec(@current_generation)
-      generation_change if (i % @generation_size == 0)
+    time_diff do
+      (1000 * @generation_size).times do |i|      
+        operator = choose_random_operation
+        operator.exec(@current_generation)
+        generation_change if (i % @generation_size == 0)
+      end      
     end
   end  
   
   protected
+  
+  def time_diff(&block)
+    t1 = Time.now
+    yield
+    t2 = Time.now
+    puts "\n\nElapsed time: #{t2-t1} seconds."
+  end
   
   def choose_random_operation
     operation = nil
@@ -64,5 +77,6 @@ class Evolver
     @current_generation = Generation.new
     fittest_n.each { |i| @current_generation << i } 
     @generation_count += 1
+    fire_generation_change_event(@generation_count, @current_generation)
   end
 end

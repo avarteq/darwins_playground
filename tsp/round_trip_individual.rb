@@ -1,4 +1,4 @@
-class RoundTripIndividual < GenIndividual
+class RoundTripIndividual < GeneIndividual
   def initialize
     @fitness_function = LinearDistanceFitness    
   end
@@ -15,4 +15,17 @@ class RoundTripIndividual < GenIndividual
     origin = build_from_genes( City.build_from_csv_file(File.dirname(__FILE__) + "/coordinates.csv") )    
     return origin
   end
+  
+  def to_g_polyline
+    ret = ""
+    ret += 'var polyline = new GPolyline([' + "\n"
+    @genes.each do |city|
+      coord = city.geo_coordinate
+      ret += '    ' + coord.to_g_lat_lng + ",\n"
+    end
+      ret += '    ' + @genes.first.geo_coordinate.to_g_lat_lng + ", \n"
+    ret += '], "#FF0000", 3, 1, polyOptions);'
+    return ret
+  end
+
 end

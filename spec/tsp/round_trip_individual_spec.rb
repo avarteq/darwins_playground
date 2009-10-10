@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + "/../../" + "tsp/linear_distance_fitness"
 require File.dirname(__FILE__) + "/../../" + "tsp/geo_coordinate"
 require File.dirname(__FILE__) + "/../../" + "genetic/gene"
 require File.dirname(__FILE__) + "/../../" + "genetic/individual"
-require File.dirname(__FILE__) + "/../../" + "genetic/gen_individual"
+require File.dirname(__FILE__) + "/../../" + "genetic/gene_individual"
 require File.dirname(__FILE__) + "/../../" + "tsp/round_trip_individual"
 require File.dirname(__FILE__) + "/../../" + "tsp/city"
 
