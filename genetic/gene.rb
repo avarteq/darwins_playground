@@ -10,4 +10,8 @@ class Gene
   def ==(gene)
     return self.gene_id == gene.gene_id
   end
+  
+  def to_s
+    @gene_id.to_s
+  end
 end

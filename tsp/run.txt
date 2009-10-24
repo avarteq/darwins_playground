@@ -1,0 +1,25 @@
+0.25 Crossover
+Generation nr. 2000
+	Generation's fittest individual: 2864.45272749726
+Elapsed time: 1446.43569 seconds.
+8-7-3-4-2-1-5-10-9-6-11-21-18-19-20-17-16-12-14-13-15
+
+0 Crossover
+Generation nr. 2000
+	Generation's fittest individual: 2834.87182726966
+
+
+Elapsed time: 906.013628 seconds.
+9-6-5-1-2-3-4-10-7-8-15-13-14-12-11-21-16-18-19-20-17
+
+
+
+
+
+
+Generation nr. 2000
+	Generation's fittest individual: 2938.36653263952
+
+
+Elapsed time: 1158.286034 seconds.
+10-5-1-2-4-3-7-8-15-13-14-12-9-6-11-21-16-18-19-20-17

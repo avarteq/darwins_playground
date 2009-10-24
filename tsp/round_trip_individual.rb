@@ -1,5 +1,6 @@
 class RoundTripIndividual < GeneIndividual
   def initialize
+    super
     @fitness_function = LinearDistanceFitness    
   end
   
@@ -18,7 +19,7 @@ class RoundTripIndividual < GeneIndividual
   
   def to_g_polyline
     ret = ""
-    ret += 'var polyline = new GPolyline([' + "\n"
+    ret += 'polyline = new GPolyline([' + "\n"
     @genes.each do |city|
       coord = city.geo_coordinate
       ret += '    ' + coord.to_g_lat_lng + ",\n"
@@ -27,5 +28,4 @@ class RoundTripIndividual < GeneIndividual
     ret += '], "#FF0000", 3, 1, polyOptions);'
     return ret
   end
-
 end

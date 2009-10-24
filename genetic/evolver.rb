@@ -8,10 +8,10 @@ class Evolver
   # === Parameters
   # +origin+:: First individual
   def initialize(origin, recombination_operation, mutation_operation)
-    @recombination_probability = 0 #0.75
+    @recombination_probability = 0.15 #0.75
     @mutation_probability = 1 - @recombination_probability
     
-    @generation_size = 100
+    @generation_size = 75
     
     # How many generations have been passed?
     @generation_count = 1
@@ -20,7 +20,6 @@ class Evolver
     # Operations
     @recombination_operation = recombination_operation
     @mutation_operation = mutation_operation
-    
     # @selection_operation = SurvivalOfTheFittest.new
     
     @current_generation = Generation.new  
@@ -29,14 +28,18 @@ class Evolver
   end
   
   # Start evolutionary process
-  def evolve
+  def evolve(max_nr_of_generations = 1000)
     time_diff do
-      (1000 * @generation_size).times do |i|      
-        operator = choose_random_operation
-        operator.exec(@current_generation)
-        generation_change if (i % @generation_size == 0)
+      (max_nr_of_generations).times do |i|      
+        begin
+          operator = choose_random_operation
+          operator.exec(@current_generation)
+        end while ( @current_generation.size % @generation_size >= 1)
+        generation_change 
       end      
     end
+    
+    puts @current_generation.fittest.to_s
   end  
   
   protected

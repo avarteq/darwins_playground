@@ -22,4 +22,17 @@ class GeneIndividual < Individual
     @genes[index_1] = @genes[index_2]
     @genes[index_2] = tmp_gene
   end
+  
+  def ==(other)
+    @genes == other.genes
+  end
+  
+  def to_s
+    ret = ""
+    @genes.each do |gene|
+      ret += gene.to_s + "-"
+    end
+    ret.chop!
+    return ret
+  end
 end
