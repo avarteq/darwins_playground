@@ -9,7 +9,7 @@ class TspTxtGenerationListener
   def generation_change_event(generation_count, new_generation)
 
 
-    if (generation_count % 25 == 0) then
+    if (generation_count % 5 == 0) then
       fittest = new_generation.fittest      
 
         @last_fittest_fitness = fittest.fitness

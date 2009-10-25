@@ -4,6 +4,7 @@ class Evolver
   include GenerationObservable
   
   attr_accessor :recombination_operation, :mutation_operation, :selection_operation
+  attr_accessor :recombination_probability, :generation_size 
   
   # === Parameters
   # +origin+:: First individual
