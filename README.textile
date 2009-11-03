@@ -2,6 +2,11 @@ h1. Darwin's Playground
 
 p>. !http://farm3.static.flickr.com/2545/3859077628_55156d5b3e_t.jpg(Avarteq GmbH)!:http://www.avarteq.de
 
+h2. Screenshot
+
+p>. !http://github.com/avarteq/darwins_playground/raw/master/gui/images/genetic_algorithms_with_ruby_screenshot.png(Solving the Travaling Salesmen Problem using a Genetic Algorithms with Ruby)!
+
+h2. Usage
 # Start the application
 # Open the browser
 # Enjoy watching the evolution :-)
