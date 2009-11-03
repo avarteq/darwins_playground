@@ -18,7 +18,12 @@ function initialize() {
 
 
 function refreshCoords() {
-    new Ajax.Request("file:///Users/jfischer/git/darwins_playground/gui/current_coords.txt", {
+	
+	/* file:///Users/jfischer/git/darwins_playground/gui/ajax_map.html
+	 * --> "file:///Users/jfischer/git/darwins_playground/gui/current_coords.txt"
+	 */
+	var coords_url = location.href.gsub("ajax_map.html", "current_coords.txt");
+    new Ajax.Request(coords_url, {
         method: 'get',
         onSuccess: function(transport) {
             var response = transport.responseText || "no response text";
@@ -34,6 +39,6 @@ function refreshCoords() {
 
 
 function refreshCoordsPeriodically() {
-    new PeriodicalExecuter(refreshCoords, 1);
+    new PeriodicalExecuter(refreshCoords, 0.1);
 
 }
