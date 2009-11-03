@@ -1,0 +1,36 @@
+h1. Darwin's Playground
+
+p>. !http://farm3.static.flickr.com/2545/3859077628_55156d5b3e_t.jpg(Avarteq GmbH)!:http://www.avarteq.de
+
+# Start the application
+# Open the browser
+# Enjoy watching the evolution :-)
+
+h2. How to start the application
+ cd <YOUR_REPO_PATH>/tsp/
+ ruby main.rb
+
+Open your browser using the file open function. The url could look like this:
+ file:///Users/<YOUR_USER>/git/darwins_playground/gui/
+
+h2. Where to setup the Evolver?
+Some changes can be made in genetic/main.rb. Others can be made in genetic/evolver.rb.
+
+**Have fun!**
+
+h1. Contact
+
+* You would like to have a genetic algorithm for your project but don't want to do the dirty work? 
+* Want to argue about the Ruby and the meaning of life?
+
+Feel free to contact us:
+
+Avarteq GmbH
+Julian Fischer
+genetic.algorithms@avarteq.de
+"www.avarteq.de":http://www.avarteq.de
+
+Also checkout our hosting services:
+"www.railshoster.de":http://www.railshoster.de
+and
+"www.enterprise-rails.de":http://www.enterprise-rails.de
