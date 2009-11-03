@@ -6,10 +6,21 @@ class CycleCrossover
   # <tt>dad = (4 - 5 - 6 - 3 - 2 - 7 - 1)</tt>
   # 
   # == Step a)
-  # a) Choose a gene from the first parent (e.g. 4). Add it to the cycle.
-  # Search for the corresponding gene (4) in the
-  # second parent. Add it to the cycle. Search for the corresponding gene in parent 1 ...
-  # until the cycle has been closed <tt>3 - .... - 3</tt>.
+  # a) Choose a gene from the first parent (e.g. gene=3, index=1). Add it to the cycle.
+  # <tt>Cycle: (3)</tt>
+  # Search for gene with the same index in Dad's genes (gene=5, index=1). Add it to the cycle.
+  # <tt>Cycle: (3 - 5)</tt>
+  # Search for the corresponding gene (gene=5, index=2) in Mom's genes.
+  # Look for the gene at index 2 at Dad's genes (gene=6, index=2).
+  # Add it to the cycle.
+  # <tt>Cycle: (3 - 5 - 6)</tt>
+  #
+  # Search for the corresponding gene in Dad's gens (gene=6, index=5).
+  # Look for the gene at index 5 (gene=7, index=5).
+  # Add it to the cycle.
+  # <tt>Cycle: (3 - 5 - 6 - 7)</tt>
+  # ...
+  # Repeat this strategy until the cycle has been closed <tt>3 - .... - 3</tt>.
   # <tt>Cycle: (3 - 5 - 6 - 7 - 3)</tt>
   # === Step b)
   # b) Genes which are in the cycle will be taken over from their parents

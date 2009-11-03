@@ -1,0 +1,12 @@
+.idea
+nbproject/*
+nbproject/**/*
+log/*.log
+tmp/**/*
+log/*.pid
+db/schema.rb
+.DS_Store
+*.swp
+*~
+*#
+config/database.yml
