@@ -7,13 +7,18 @@ p>. !http://farm3.static.flickr.com/2545/3859077628_55156d5b3e_t.jpg(Avarteq Gmb
 # Enjoy watching the evolution :-)
 
 h2. How to start the application
- cd <YOUR_REPO_PATH>/tsp/
- ruby main.rb
+
+bc. cd <YOUR_REPO_PATH>/tsp/
+
+bc. ruby main.rb
 
 Open your browser using the file open function. The url could look like this:
- file:///Users/<YOUR_USER>/git/darwins_playground/gui/
+
+bc. file:///Users/<YOUR_USER>/git/darwins_playground/gui/
+
 
 h2. Where to setup the Evolver?
+
 Some changes can be made in genetic/main.rb. Others can be made in genetic/evolver.rb.
 
 **Have fun!**
