@@ -1,2 +1,0 @@
-class SurvivalOfTheFittest < Selection
-end
